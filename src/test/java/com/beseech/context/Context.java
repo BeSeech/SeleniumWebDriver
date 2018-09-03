@@ -49,6 +49,10 @@ public class Context {
         return _protocol + "://" + _urlSubdomainPart + "." + _urlPostfix;
     }
 
+    public String getBaseInviteUrl(String orgSubdomainToJoin) {
+        return _protocol + "://" + orgSubdomainToJoin + "." + _urlPostfix;
+    }
+
     public String getApiBaseUrl() {
         return _protocol + "://" + _apiBasicUrl;
     }

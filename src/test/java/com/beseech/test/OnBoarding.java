@@ -14,7 +14,6 @@ import org.junit.*;
 import org.junit.rules.TestName;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.chrome.ChromeDriver;
-
 import java.util.ArrayList;
 import java.util.Base64;
 import java.util.List;
@@ -239,7 +238,7 @@ public class OnBoarding {
 
         String email = users.get(0).getEmail();
         email = Base64.getEncoder().encodeToString(email.getBytes());
-        String inviteUrl = _context.getBaseUrl() + String.format("/invite?token=%s&email=%s&organizationId=%s&subdomain=%s", token, email, toOrganization.getId(), toOrganization.getSubdomain());
+        String inviteUrl = _context.getBaseInviteUrl(toOrganization.getSubdomain()) + String.format("/invite?token=%s&email=%s&organizationId=%s&subdomain=%s", token, email, toOrganization.getId(), toOrganization.getSubdomain());
         System.out.println("InviteUrl is: " + inviteUrl);
         return inviteUrl;
     }

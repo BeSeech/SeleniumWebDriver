@@ -2,10 +2,10 @@
   "qaToken": "9YEeklCezUmRuEMjec4m",
   "protocol": "https",
   "urlSubdomainPart": "create",
-  "11_urlPostfix": "dev11.airslate-dev.xyz",
-  "11_apiBasicUrl": "dev11-api.airslate-dev.xyz/v1",
-  "urlPostfix": "airslate.com",
-  "apiBasicUrl": "api.airslate.com/v1",
+  "urlPostfix": "dev11.airslate-dev.xyz",
+  "apiBasicUrl": "dev11-api.airslate-dev.xyz/v1",
+  "prod_urlPostfix": "airslate.com",
+  "prod_apiBasicUrl": "api.airslate.com/v1",
   "_urlPostfix": "airslate-dev.xyz",
   "_apiBasicUrl": "api.airslate-dev.xyz/v1"
 

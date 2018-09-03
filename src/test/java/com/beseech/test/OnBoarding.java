@@ -102,7 +102,14 @@ public class OnBoarding {
             directJoin.doDirectJoinUser(user.getFirstName(), user.getLastName(), user.getPassword());
             sleep(WAIT_AFTER_SUBMIT_MS);
 
-            login(_context, user, false);
+            sleep(WAIT_AFTER_SUBMIT_MS);
+            LoginPage loginPage = new LoginPage(_context);
+            loginPage.initElements();
+            Assert.assertTrue("The prefilled email is: " + user.getEmail(), user.getEmail().equals(loginPage.getUserNameInput().getText()));
+            loginPage.setPasswordInput(user.getPassword());
+            loginPage.submit();
+            sleep(WAIT_AFTER_SUBMIT_MS);
+
             sleep(WAIT_AFTER_SUBMIT_MS);
             _context.setUrlSubdomainPart(_context.uid);
 

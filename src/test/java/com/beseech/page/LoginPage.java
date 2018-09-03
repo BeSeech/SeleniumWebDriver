@@ -48,6 +48,10 @@ public class LoginPage extends BasicPage {
         userNameInput.sendKeys(value);
     }
 
+    public WebElement getUserNameInput() {
+        return this.userNameInput;
+    }
+
     public void setPasswordInput(String value) {
         System.out.println(Tools.getSpace(1) + "Set Password text as '" + value + "'");
         passwordInput.clear();
